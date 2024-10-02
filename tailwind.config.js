@@ -2,25 +2,25 @@ const BLOG = require('./blog.config')
 const { fontFamilies } = require('./lib/font')
 
 module.exports = {
-  content: [
-    './pages/**/*.js',
-    './components/**/*.js',
-    './layouts/**/*.js',
-    './themes/**/*.js'
-  ],
+  content: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js', './themes/**/*.js'],
   darkMode: BLOG.APPEARANCE === 'class' ? 'media' : 'class', // or 'media' or 'class'
   theme: {
     fontFamily: fontFamilies,
     screens: {
       sm: '540px',
       // => @media (min-width: 576px) { ... }
+
       md: '720px',
       // => @media (min-width: 768px) { ... }
+
       lg: '960px',
       // => @media (min-width: 992px) { ... }
+
       xl: '1140px',
       // => @media (min-width: 1200px) { ... }
-      '2xl': '1536px'
+
+      '2xl': '1320px'
+      // => @media (min-width: 1400px) { ... }
     },
     container: {
       center: true,
@@ -64,9 +64,7 @@ module.exports = {
       },
       maxWidth: {
         side: '14rem',
-        '9/10': '90%',
-        'screen-3xl': '1440px',
-        'screen-4xl': '1560px'
+        '9/10': '90%'
       },
       boxShadow: {
         input: '0px 7px 20px rgba(0, 0, 0, 0.03)',
